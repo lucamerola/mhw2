@@ -1,0 +1,109 @@
+/* TODO: inserite il CSS necessario per completare il MHW! */
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.choice-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#choice-grid-last{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#choice-grid-last .div-data-choice{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.div-data-choice{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: calc(32.5% - 22px); /*Ogni risposta (flex item) ha una larghezza pari a 32.5%, ed è distribuita su tutto lo spazio a disposizione.*/
+    border: 1px; /*Il bordo ha spessore 1px e colore #dcdcdc*/
+    border-style: solid;
+    border-color: #dcdcdc;
+    padding: 10px; /*Lo spazio tra il bordo e il contenuto dell’elemento è 10px.*/
+    margin-top: 10px; /* Tra ogni riga c’è uno spazio di 20px*/
+    margin-bottom: 10px; /* quindi ho giocato tra margin di div-data-choice e il padding di choice-grid */
+    background-color: #f4f4f4;
+}
+
+.div-data-choice img{
+    width: 200px;
+    height: 200px;
+}
+
+.checkbox{
+    width: 20px; /*La larghezza e l’altezza dell’immagine è sono pari a 20px*/
+    height: 20x;
+    max-width: 20px; /*non è necessario*/
+    max-height: 20px;
+}
+
+.result{
+    width: calc(100% - 40px);
+    margin-top: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.result-content{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+#reload{
+    width: 100%;
+    height: 50px;
+    background-color: #cecece;
+}
+
+#reload:hover{
+    color: #e0e0e0;
+}
+
+@media(max-width: 700px){
+    article{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        width: 95%;
+    }
+    section{
+        width: 100%;
+    }
+
+    header div{
+        /*
+            I cerchi gialli nell’header non devono apparire.
+        */
+        display: none;
+    }
+
+    .div-data-choice img{
+        width: 100%;
+        height: auto;
+    }
+    
+
+}
+
+@media(max-width: 500px){
+    /*
+        Se la larghezza dello schermo è minore di 500px:
+        Ogni risposta deve avere larghezza pari al 49% invece di 32.5%.
+    */
+    .div-data-choice{
+        width: calc(49% - 22px);
+    }
+}
